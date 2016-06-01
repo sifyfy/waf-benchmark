@@ -1,0 +1,16 @@
+#!/bin/bash -e
+
+NAME=$1
+DIR=$2
+if [ "$NAME" != "" -a "$DIR" != "" ]; then
+   set -m
+   docker pull siphilia/apache-php
+   docker run --rm --name $NAME -v $DIR:/var/www/html siphilia/apache-php &
+   sleep 3
+   echo "### Server IPv4 address ###"
+   docker inspect --format '{{ .NetworkSettings.IPAddress }}' $NAME
+   echo "###########################"
+   fg
+else
+   echo "Usage: run-web-server CONTAINER_NAME PUBLISH_DIRECTORY"
+fi

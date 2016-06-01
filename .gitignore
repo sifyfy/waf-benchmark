@@ -1,0 +1,13 @@
+.DS_Store
+.directory
+Thumbs.db
+core
+*.swp
+*~
+*.bak
+*.log
+node_modules/
+.stack-work/
+target/
+client_session_key.aes
+Cargo.lock

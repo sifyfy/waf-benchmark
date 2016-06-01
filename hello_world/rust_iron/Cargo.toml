@@ -1,0 +1,7 @@
+[package]
+name = "rust_iron"
+version = "0.1.0"
+authors = ["siphilia <siphilia.rn@gmail.com>"]
+
+[dependencies]
+iron = "0.3.0"

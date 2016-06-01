@@ -1,0 +1,8 @@
+[package]
+name = "rust_rotor_http"
+version = "0.1.0"
+authors = ["siphilia <siphilia.rn@gmail.com>"]
+
+[dependencies]
+rotor = "*"
+rotor-http = "0.7.0"
